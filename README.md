@@ -1,15 +1,3 @@
-# device_session_id
-
-A new Flutter plugin project.
-
-## Getting Started
-
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
-
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Openpay Device Session ID
+This package integrates the [Openpay iOS](https://github.com/open-pay/openpay-swift-ioshttp:// "Openpay iOS") and [Openpay Android](http://https://github.com/open-pay/openpay-android "Openpay Android") libraries to generate the Device Session ID used in the Openpay [Anti-Fraud System](http://https://documents.openpay.mx/docs/fraud-tool.html "Anti-Fraud System") for the card payments through their [API.](http://https://documents.openpay.mx/docs/api/ "API.")
 
