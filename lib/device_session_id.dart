@@ -3,8 +3,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
+/// [DeviceSessionId] IS THE CLASS THAT GIVES US THE DEVICE SESSION ID
 class DeviceSessionId {
   @visibleForTesting
+
+  /// THE [methodChannel] CONNECTS TO THE OPENPAY LIBRARIES
   static const methodChannel = MethodChannel('device_session_id');
 
   /// MAIN METHOD FOR GETTING THE DEVICE SESSION ID
