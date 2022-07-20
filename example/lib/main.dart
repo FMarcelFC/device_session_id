@@ -15,21 +15,19 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String _deviceID = '';
-  static const String merchantID =
-      'mpzmfkrdzp0phiivoyhx'; // REPLACE THIS WITH YOUR MERCHANT ID
-  static const String apiKey =
-      'pk_6ae46106fba94a6fa8f3dc140fce0c32'; // REPLACE THIS WITH YOUR API KEY
-  static const bool productionMode =
-      true; // REPLACE THIS IF YOU ARE NOT ON PRODUCTION MODE
   @override
   void initState() {
     super.initState();
-    initPlatformState();
+    initDeviceSession();
   }
 
-  Future<void> initPlatformState() async {
+  Future<void> initDeviceSession() async {
     String deviceID;
-
+    const String merchantID =
+        '<<MERCHANT_ID>>'; // REPLACE THIS WITH YOUR MERCHANT ID
+    const String apiKey = '<<API_KEY>>'; // REPLACE THIS WITH YOUR API KEY
+    const bool productionMode =
+        true; // REPLACE THIS IF YOU ARE NOT ON PRODUCTION MODE
     try {
       deviceID = await DeviceSessionId.getDeviceID(
               merchantID, apiKey, productionMode) ??
@@ -37,8 +35,6 @@ class _MyAppState extends State<MyApp> {
     } catch (e) {
       deviceID = 'Error getting the device session id';
     }
-
-    if (!mounted) return;
 
     setState(() {
       // THIS IS WHERE THE ID IS STORED
