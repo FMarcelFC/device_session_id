@@ -13,3 +13,7 @@
 ## 1.0.3
 
 * Minor changes in the example and documentation
+
+## 1.0.4
+
+* Improvement in API documentation
