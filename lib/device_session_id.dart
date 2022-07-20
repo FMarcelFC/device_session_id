@@ -3,17 +3,14 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-/// [DeviceSessionId] IS THE CLASS THAT GIVES US THE DEVICE SESSION ID
+/// [DeviceSessionId] is the class that allows you to get the ID from Openpay needed for your card payments.
 class DeviceSessionId {
   @visibleForTesting
 
-  /// THE [methodChannel] CONNECTS TO THE OPENPAY LIBRARIES
+  /// The [methodChannel] connects to the Openpay libraries to use native code.
   static const methodChannel = MethodChannel('device_session_id');
 
-  /// MAIN METHOD FOR GETTING THE DEVICE SESSION ID
-  /// THE [MERCHANT_ID] AND [API_KEY] ARE GIVEN BY OPENPAY
-  /// THE [productionMode] INDICATES IF THE PROCESS WILL BE EXECUTED IN DEBUGGING OR PRODUCTION MODE
-  /// THE [deviceID] STORES THE DEVICE SESSION ID AND RETURNS IT
+  /// The [getDeviceID] method uses the [MERCHANT_ID] and [API_KEY] provided by Openpay to get the Device Session ID and return it in the [deviceID] variable as a String.
   static Future<String?> getDeviceID(
       String MERCHANT_ID, String API_KEY, bool productionMode) async {
     final deviceID = await methodChannel.invokeMethod<String>('getDeviceID', {

@@ -9,3 +9,7 @@
 ## 1.0.2
 
 * Improvements in documentation and link errors in README.md
+
+## 1.0.3
+
+* Minor changes in the example and documentation
