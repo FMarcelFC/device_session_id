@@ -21,6 +21,6 @@ This package integrates the [Openpay iOS](https://github.com/open-pay/openpay-sw
           // THIS IS WHERE THE ID IS STORED
           _deviceID = deviceID;
         });
-      }````
-
+      }
+````
 You can use this ID in your json to process the card payments.
