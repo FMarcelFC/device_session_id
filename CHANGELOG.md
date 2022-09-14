@@ -17,3 +17,7 @@
 ## 1.0.4
 
 * Improvement in API documentation
+
+## 1.0.5
+
+* Testing plugin for iOS

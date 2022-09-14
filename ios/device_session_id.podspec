@@ -4,24 +4,21 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'device_session_id'
-  s.version          = '0.0.1'
-  s.summary          = 'A new Flutter plugin project.'
-  s.description      = <<-DESC
-A new Flutter plugin project.
-                       DESC
-  s.homepage         = 'http://example.com'
+  s.version          = '1.0.0'
+  s.summary          = 'Device Session ID plugin Openpay.'
+  s.description      = 'A Flutter plugin for Openpay antifraud system.'
+  s.homepage         = 'https://github.com/FMarcelFC/device_session_id'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'Freddy Marcel Flors Chavarría' => 'fmarcelfc@gmail.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
-  s.platform = :ios, '9.0'
+  s.dependency 'Openpaykit'
+  s.platform = :ios, '12.0'
 
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.swift_version = '5.0'
 
-  s.preserve_paths = 'OpenpayKit.xcframework/**/*'
-  s.xcconfig = { 'OTHER_LDFLAGS' => '-framework OpenpayKit' }
-  s.vendored_frameworks = 'OpenpayKit.xcframework'
+
 end
